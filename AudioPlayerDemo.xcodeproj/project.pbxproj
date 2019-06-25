@@ -94,6 +94,15 @@
 			path = NetworkingTool;
 			sourceTree = "<group>";
 		};
+		E58B307B22C1D59D008290BC /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				E5CF1DDD22C0783700027AA0 /* SFFanGroupAudioCacheManager.swift */,
+				E5CF1DDB22C0782B00027AA0 /* SFAudioManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
 		E5CF1DB722C0770700027AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +150,8 @@
 		E5CF1DD822C0780700027AA0 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				E5CF1DDD22C0783700027AA0 /* SFFanGroupAudioCacheManager.swift */,
-				E5CF1DDB22C0782B00027AA0 /* SFAudioManager.swift */,
 				E5CF1DD922C0781A00027AA0 /* SFAudioPlayer.swift */,
+				E58B307B22C1D59D008290BC /* manager */,
 				E57D692622C0852D00A2FAD3 /* Model */,
 				E5CF1DDF22C0785000027AA0 /* View */,
 			);
