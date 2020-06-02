@@ -1,6 +1,8 @@
 # AudioPlayerDemo
 音乐播放器(Swift实现)
 
+后端Server挂了，暂时只看代码吧！
+
 --------------------------------------------
 
 ![Alt tag](demo.gif)
