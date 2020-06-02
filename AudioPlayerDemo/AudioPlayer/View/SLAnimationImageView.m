@@ -55,9 +55,6 @@
 
 //暂停动画
 - (void)pauseAnimation {
-    //（0-5）
-    //开始时间：0
-    //    myView.layer.beginTime
     //1.取出当前时间，转成动画暂停的时间
     CFTimeInterval pauseTime = [self.layer convertTime:CACurrentMediaTime() fromLayer:nil];
     
@@ -88,9 +85,5 @@
     [self startAnimating];
 }
 
-//- (void)setImage:(UIImage *)image{
-//    //[super setImage:image];
-//    self.layer.contents = (__bridge id _Nullable)(image.CGImage);
-//}
 
 @end

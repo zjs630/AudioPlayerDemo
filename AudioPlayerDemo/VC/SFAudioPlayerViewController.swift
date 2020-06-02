@@ -50,7 +50,7 @@ class SFAudioPlayerViewController: UIViewController, SFAudioPlayerDelegate {
 
     /// 旋转的指示器
     fileprivate let downloadingView: UIActivityIndicatorView = {
-        let downloadingView = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        let downloadingView = UIActivityIndicatorView(style: .white)
         downloadingView.isHidden = true
         return downloadingView
     }()
@@ -88,7 +88,7 @@ class SFAudioPlayerViewController: UIViewController, SFAudioPlayerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDataForUI()
-        NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: UIApplication.willResignActiveNotification, object: nil)
 
         if let url = model?.audioUrl {
             playNewAudioURL(urlString: url)

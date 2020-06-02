@@ -57,9 +57,9 @@ class NetworkManager: AFHTTPSessionManager {
         }
         
         if method == .get {
-            NetworkManager.shared.get(url, parameters: parameters, progress: nil, success:success, failure: failure)
+            NetworkManager.shared.get(url, parameters: parameters, headers: [:], progress: nil, success:success, failure: failure)
         } else if method == .post {
-            NetworkManager.shared.post(url, parameters: parameters, progress: nil, success:success, failure: failure)
+            NetworkManager.shared.post(url, parameters: parameters, headers: [:], progress: nil, success:success, failure: failure)
         }
         
     }

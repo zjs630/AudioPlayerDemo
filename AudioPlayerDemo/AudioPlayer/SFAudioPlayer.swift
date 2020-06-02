@@ -67,7 +67,7 @@ class SFAudioPlayer: NSObject {
     func play(loacl url:URL) -> (isOk: Bool,errorCode: Int?){
         do {
             try AVAudioSession.sharedInstance().setActive(true)
-            try AVAudioSession.sharedInstance().setCategory("AVAudioSessionCategoryPlayback")
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category(rawValue: "AVAudioSessionCategoryPlayback"))
             
             player = try AVAudioPlayer(contentsOf:url)
             player?.delegate = self

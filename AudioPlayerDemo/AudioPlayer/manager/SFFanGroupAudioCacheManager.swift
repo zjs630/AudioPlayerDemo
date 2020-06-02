@@ -33,7 +33,7 @@ class SFFanGroupAudioCacheManager {
     
     
     init() {
-        NotificationCenter.default.addObserver(self, selector: #selector(cleanDisk), name: .UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(cleanDisk), name: UIApplication.didEnterBackgroundNotification, object: nil)
 
         manager = AFURLSessionManager(sessionConfiguration: URLSessionConfiguration.default)
         let security = AFSecurityPolicy.default()

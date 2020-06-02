@@ -180,7 +180,7 @@ extension UIImage {
         //设置模糊半径值（越大越模糊）
         filter.setValue(blur, forKey: kCIInputRadiusKey)
         let outputCIImage = filter.outputImage!
-        let context =  CIContext(options: [kCIContextUseSoftwareRenderer : false])
+        let context =  CIContext(options: convertToOptionalCIContextOptionDictionary([convertFromCIContextOption(CIContextOption.useSoftwareRenderer) : false]))
         
         let cgImage = context.createCGImage(outputCIImage, from: rect)
         if let cgImage = cgImage {
@@ -197,4 +197,15 @@ extension UIImage {
         return image!
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalCIContextOptionDictionary(_ input: [String: Any]?) -> [CIContextOption: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (CIContextOption(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCIContextOption(_ input: CIContextOption) -> String {
+	return input.rawValue
 }
